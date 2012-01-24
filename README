@@ -1,0 +1,47 @@
+
+A distribution of Arduino libraries for using FreeRTOS
+Pat Hickey
+Jan 2012
+
+REQUIRMENTS
+
+These libraries have been tested with Arduino 0023. They are not
+compatible with Arduino 1.0.
+
+INSTALLATION
+
+Copy these two directories into the libraries directory of your Arduino
+sketchbook.
+
+INCLUDED LIBRARIES
+
+* ArduinoFreeRTOS:
+
+The library ArduinoFreeRTOS packages the FreeRTOS 6.1.0 kernel into a
+library that works with the Arduino IDE. It has been tested with the
+Arduino Mega 2560.
+
+Please see the file ArduinoFreeRTOS/LICENSE for the FreeRTOS license.
+
+An example sketch is provided to demonstrate kernel initialization and
+multitasking using a mutex to protect a shared resource.
+
+* RTOSSerial: 
+
+The RTOSSerial library is based on Mike Smith's FastSerial library,
+which is part of the ArduPilot project. It uses FreeRTOS queues as
+buffers for ISR-driven serial read and write. The ArduinoFreeRTOS
+library is required for RTOSSerial to work properly. RTOSSerial has been
+tested with the Arduino Mega 2560.
+
+An example sketch, derived from the FastSerial example sketch,
+demonstrates the RTOSSerial's expanded BetterStream interface and 
+
+The RTOSSerial library is released under a BSD-compatible license.
+
+* Makefile support:
+
+The file Arduino.mk, authored by Mike Smith and part of the Ardupilot
+project, is included. It may be useful for building the example
+sketches from the command line.
+

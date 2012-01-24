@@ -1,0 +1,12 @@
+ArduinoFreeRTOS
+A port of FreeRTOS which can be used as an Arduino library
+Pat Hickey, Dec 2011
+
+This code is derived from the DuinOS project (http://robotgroup.com.ar), and based on the FreeRTOS 6.1.0 kernel (http://freertos.org). See LICENSE for details on the FreeRTOS license.
+
+It has been tested with the Arduino Mega 2560 using the Arduino 0023 IDE.
+
+A sketch at examples/SimpleTest is provided to demonstrate cooperative multitasking and the use of a semaphore. 
+
+The kernel uses the 16-bit Timer 1 to run the scheduler with a period of 1ms. This will break any Arduino core library functions which use Timer 1.
+
